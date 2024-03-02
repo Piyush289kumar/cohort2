@@ -5,7 +5,6 @@ const port = 3000
 
 
 app.use(bodyParse.json());
-
 app.post('/app', (req, res) => { 
     console.log(req.body);   
     res.send('2 + 2 = 4')
