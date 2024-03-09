@@ -1,22 +1,19 @@
 const express = require('express')
+const zod = require('zod')
+
+const mySchema = zod.array(zod.number())
 const app = express();
-app.get('/health-checkup', (req, res) => {
-    const kidneyId = req.query.kidneyId
-    const user = req.headers.username;
-    const password = req.headers.password;
-    if (user === "Piyush" && password === '123') {
-        if (kidneyId != 1 && kidneyId != 2) {
-            res.status(411).json({
-                msg: "wrong inputs"
-            })
-            return
+
+app.use(express.json())
+
+app.post('/health-checkup', (req, res) => {
+    const kidneys = req.body.kidneys;
+    const zodResponse = mySchema.safeParse(kidneys)
+
+    res.json(
+        {
+            zodResponse
         }
-        res.send('Your Healthy')
-    } else {
-        res.status(403).json({
-            msg: "User doesn't exist"
-        })
-        return
-    }
+    )
 })
 app.listen(3000)
