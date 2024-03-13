@@ -44,7 +44,7 @@ app.get("/users", (req, res) => {
         const decoded = jwt.verify(token, jwtPassword);
         const username = decoded.username;
         res.json({
-            msg: "Login Successfully"
+          users : ALL_USERS.filter((item, idx)=>(item.username == username))
         })
     } catch (error) {
         return res.status(403).json({
