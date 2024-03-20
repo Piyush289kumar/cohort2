@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="task" id="task" placeholder="Task">
+        <input type="text" name="des" id="des" placeholder="Description">
+        <button type="button" onclick=handleClick()>Add Todo</button>
+
+        <div id="mytask">
+
+        </div>
+
+    </div>
+
+    <script>
+        const task = document.getElementById('task').value;
+        const des = document.getElementById('des').value;
+
+        const taskNode = document.createElement('p')
+        const taskNodeText = document.createTextNode(task)
+        const taskDesNode = document.createElement('p')
+        const taskDesNodeText = document.createTextNode(des)
+        
+
+        taskNode.appendChild(taskNodeText)
+        taskDesNode.appendChild(taskDesNodeText)
+
+
+        const handleClick = () => {
+            console.log(`${task} : ${des}`);
+
+            document.getElementById('mytask').appendChild(taskNode)
+            document.getElementById('mytask').appendChild(taskDesNode)
+
+            taskNode.innerText = '';
+            taskDesNode.innerText = '';
+
+        }
+
+    </script>
+</body>
+
+</html>
