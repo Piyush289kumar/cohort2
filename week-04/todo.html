@@ -20,41 +20,31 @@
     </div>
 
     <script>
-        const task = document.getElementById('task').value;
-        const des = document.getElementById('des').value;
+        function handleClick() {
+            const task = document.getElementById('task').value;
+            const des = document.getElementById('des').value;
 
+            const taskNode = document.createElement('p')
+            taskNode.appendChild(document.createTextNode(task))
 
-        const taskNode = document.createElement('p')
-        const taskNodeText = document.createTextNode(task)
+            const desNode = document.createElement('p')
+            desNode.appendChild(document.createTextNode(des))
 
-        const taskDesNode = document.createElement('p')
-        const taskDesNodeText = document.createTextNode(des)
-
-        const buttonTask = document.createElement('button');
-        const buttonNodeText = document.createTextNode('Complete..')
-        buttonTask.appendChild(buttonNodeText)
-        buttonTask.addEventListener('click', () => {
-            document.getElementById('mytask').removeChild(buttonTask)
-            document.getElementById('mytask').removeChild(taskNode)
-            document.getElementById('mytask').removeChild(taskDesNode)
-        })
-
-
-
-        taskNode.appendChild(taskNodeText)
-        taskDesNode.appendChild(taskDesNodeText)
-
-
-        const handleClick = () => {
-            console.log(`${task} : ${des}`);
-
-            document.getElementById('mytask').append(buttonTask)
-            document.getElementById('mytask').append(taskNode)
-            document.getElementById('mytask').append(taskDesNode)
+            const btn = document.createElement('button')
+            btn.appendChild(document.createTextNode('Done'))
+            btn.addEventListener('click', () => {
+                document.getElementById('mytask').removeChild(btn)
+                document.getElementById('mytask').removeChild(taskNode)
+                document.getElementById('mytask').removeChild(desNode)
+            })
 
 
 
+            document.getElementById('mytask').appendChild(taskNode)
+            document.getElementById('mytask').appendChild(desNode)
+            document.getElementById('mytask').appendChild(btn)
         }
+
 
     </script>
 </body>
