@@ -23,11 +23,23 @@
         const task = document.getElementById('task').value;
         const des = document.getElementById('des').value;
 
+
         const taskNode = document.createElement('p')
         const taskNodeText = document.createTextNode(task)
+
         const taskDesNode = document.createElement('p')
         const taskDesNodeText = document.createTextNode(des)
-        
+
+        const buttonTask = document.createElement('button');
+        const buttonNodeText = document.createTextNode('Complete..')
+        buttonTask.appendChild(buttonNodeText)
+        buttonTask.addEventListener('click', () => {
+            document.getElementById('mytask').removeChild(buttonTask)
+            document.getElementById('mytask').removeChild(taskNode)
+            document.getElementById('mytask').removeChild(taskDesNode)
+        })
+
+
 
         taskNode.appendChild(taskNodeText)
         taskDesNode.appendChild(taskDesNodeText)
@@ -36,11 +48,11 @@
         const handleClick = () => {
             console.log(`${task} : ${des}`);
 
-            document.getElementById('mytask').appendChild(taskNode)
-            document.getElementById('mytask').appendChild(taskDesNode)
+            document.getElementById('mytask').append(buttonTask)
+            document.getElementById('mytask').append(taskNode)
+            document.getElementById('mytask').append(taskDesNode)
 
-            taskNode.innerText = '';
-            taskDesNode.innerText = '';
+
 
         }
 
