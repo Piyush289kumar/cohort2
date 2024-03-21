@@ -1,0 +1,130 @@
+[
+    {
+        "bookTitle": "Book 1",
+        "numberOfPages": 500,
+        "category": [
+            "comedy",
+            "drama",
+            "action"
+        ],
+        "author": {
+            "authorName": "author 1",
+            "authorAge": 56,
+            "authorRole": "Front",
+            "authorExperiance": "15 Years"
+        },
+        "soldNumber": 6500,
+        "stockNumber": 950
+    },
+    {
+        "bookTitle": "Book 2",
+        "numberOfPages": 650,
+        "category": [
+            "drama",
+            "action"
+        ],
+        "author": {
+            "authorName": "author 2",
+            "authorAge": 66,
+            "authorRole": "Front",
+            "authorExperiance": "19 Years"
+        },
+        "soldNumber": 600,
+        "stockNumber": 50
+    },
+    {
+        "bookTitle": "Book 3",
+        "numberOfPages": 1500,
+        "category": [
+            "comedy",
+            "action"
+        ],
+        "author": {
+            "authorName": "author 3",
+            "authorAge": 75,
+            "authorRole": "Front",
+            "authorExperiance": "35 Years"
+        },
+        "soldNumber": 9500,
+        "stockNumber": 1950
+    },
+    {
+        "bookTitle": "Book 4",
+        "numberOfPages": 5500,
+        "category": [
+            "action"
+        ],
+        "author": {
+            "authorName": "author 4",
+            "authorAge": 35,
+            "authorRole": "Front",
+            "authorExperiance": "5 Years"
+        },
+        "soldNumber": 650,
+        "stockNumber": 1950
+    },
+    {
+        "bookTitle": "Book 5",
+        "numberOfPages": 500,
+        "category": [
+            "comedy",
+            "drama",
+            "action"
+        ],
+        "author": {
+            "authorName": "author 5",
+            "authorAge": 56,
+            "authorRole": "Front",
+            "authorExperiance": "15 Years"
+        },
+        "soldNumber": 6500,
+        "stockNumber": 950
+    },
+    {
+        "bookTitle": "Book 6",
+        "numberOfPages": 650,
+        "category": [
+            "drama",
+            "action"
+        ],
+        "author": {
+            "authorName": "author 6",
+            "authorAge": 66,
+            "authorRole": "Front",
+            "authorExperiance": "19 Years"
+        },
+        "soldNumber": 600,
+        "stockNumber": 50
+    },
+    {
+        "bookTitle": "Book 7",
+        "numberOfPages": 1500,
+        "category": [
+            "comedy",
+            "action"
+        ],
+        "author": {
+            "authorName": "author 7",
+            "authorAge": 75,
+            "authorRole": "Front",
+            "authorExperiance": "35 Years"
+        },
+        "soldNumber": 9500,
+        "stockNumber": 1950
+    },
+    {
+        "bookTitle": "Book 8",
+        "numberOfPages": 5500,
+        "category": [
+            "action"
+        ],
+        "author": {
+            "authorName": "author 8",
+            "authorAge": 35,
+            "authorRole": "Front",
+            "authorExperiance": "5 Years"
+        },
+        "soldNumber": 650,
+        "stockNumber": 1950
+    }
+]
