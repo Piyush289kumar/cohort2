@@ -1,5 +1,5 @@
-const { log } = require("console");
 let fs = require("fs");
+let _ = require("lodash");
 
 // fs.readFile("package.json", (error, data) => {
 //   try {
@@ -16,3 +16,6 @@ fs.open("package.json", "r+", (error, data) => {
   }
   console.log("File is open successfully");
 });
+
+let name = "Piyush kumar raikwar";
+console.log(_.kebabCase(name));
